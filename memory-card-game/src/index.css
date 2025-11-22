@@ -1,0 +1,200 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "boldFont";
+  src: url(assets/fonts/Inter_18pt-Bold.ttf);
+}
+@font-face {
+  font-family: "semiBoldFont";
+  src: url(assets/fonts/Inter_18pt-SemiBold.ttf);
+}
+@font-face {
+  font-family: "mediumFont";
+  src: url(assets/fonts/Inter_18pt-Medium.ttf);
+}
+@font-face {
+  font-family: "normalFont";
+  src: url(assets/fonts/Inter_18pt-Regular.ttf);
+}
+
+html{
+  background: radial-gradient(circle, rgb(214, 214, 214) 12%, transparent 10%);
+  background-size: 15px 15px;
+}
+body{
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+.loadingScreen{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  font-size: 80px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: "semiBoldFont";
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 4px rgb(115, 115, 115);
+  top: 0;
+  left: 0;
+}
+#root{
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.gameContainer{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  padding:60px 0px;
+}
+.scoresContainer{
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  width: 100%;
+  background-color: rgba(236, 236, 236, 0.25);
+  box-shadow: 2px 3px 6px 2px hsla(200, 14%, 61%, 0.25);
+  outline: 2px solid white;
+  backdrop-filter: blur(0px);
+  border-radius: 20px;
+  font-family: 'mediumFont';
+  font-size: 18px;
+}
+.cardsContainer{
+  perspective: 400px;
+  background-color: rgba(236, 236, 236, 0.25);
+  box-shadow: 2px 3px 6px 2px hsla(200, 14%, 61%, 0.25);
+  backdrop-filter: blur(0px);
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 40px;
+}
+.card{
+  width: 170px;
+  height: 240px;
+  position: block;
+  margin: 0;
+  border-radius: 30px;
+  padding: 8px;
+  background-color: rgba(236, 236, 236, 0.25);
+  box-shadow: 2px 3px 6px 2px hsla(200, 14%, 61%, 0.25);
+  border: 1px solid white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.card:hover{
+  scale: 1.35;
+  background-color: rgba(221, 221, 221, 0.25);
+  box-shadow: 4px 5px 7px 3px hsla(200, 14%, 61%, 0.25);
+}
+
+
+@media screen and (max-width:860px){
+  #root{
+  align-items: start;
+  height: fit-content;
+}
+.loadingScreen{
+  font-size: 60px;
+}
+.gameContainer{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+  .cardsContainer{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .card:hover{
+  scale: 1.2;
+}
+}
+
+
+@media screen and (max-width:470px){
+  .gameContainer{
+  gap: 20px;
+}
+  .scoresContainer{
+  font-size: clamp(22px, 6vw, 24px);
+  flex-direction: column;
+  gap: 10px;
+}
+.loadingScreen{
+  font-size: 40px;
+}
+.gameContainer{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+  .cardsContainer{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+  .card:hover{
+  scale: 1.1;
+}
+}
+
+
+
+.loadingDissappearing{
+  animation-name: loadingDissappearing;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes loadingDissappearing{
+  from{
+    opacity: 1;
+  }to{
+    opacity: 0;
+  }
+}
+
+
+
+.cardsAppearing{
+  animation-name: cardsAppearing;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes cardsAppearing{
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+  
+}

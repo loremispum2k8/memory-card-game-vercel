@@ -1,0 +1,11 @@
+1. When you click an image, it will check weather or not its object element has "isClicked" set to true,
+
+    > (Continue Game) If it is false raise the score +1
+
+        >> Check for all objects to see weather or not all of their "isClicked" is set to true
+
+                >>> If all objects have "isClicked" set to true reset the images by adding finalScore + 0
+                >>> If not all objects have "isClicked" set to true, reshuffle the images and return
+
+
+    > (Lose game) If it is true compare score to finalScore, if it is bigger replace it, if not add 0 to bestSCore, reset score to 0 ( images should automatically reset )
