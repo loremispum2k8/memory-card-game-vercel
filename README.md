@@ -1,6 +1,6 @@
 # **Memory Card Game**
 
-Test your memory and enjoy a visually stunning experience with [this dog-themed card game](https://loremispum2k8-memory-card-game-lzxs.vercel.app/)! 
+Test your memory and enjoy a visually stunning experience with [this dog-themed card game](https://loremispum2k8-memory-card-game-vercel-7ftza5dwm.vercel.app/)! 
 The game features 8 adorable dog cards with a sleek glassmorphism-style UI. Each card responds to hover with smooth movement, giving the interface a lively, interactive feel.
 
 ![Game](game.png)
