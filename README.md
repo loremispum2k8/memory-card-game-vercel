@@ -14,4 +14,4 @@ The game features 8 adorable dog cards with a sleek glassmorphism-style UI. Each
 
 3. After every click, the cards shuffle, making it trickier to remember their positions.
 
-- Built with React, HTML, CSS, and JavaScript, the game fetches dog images from an API, so each round features fresh, cute dogs. It also saves progrss using Local Storage.
+- Built with React, HTML, CSS, and JavaScript, the game fetches dog images from an API, so each round features fresh, cute dogs. It also saves progress using Local Storage.
