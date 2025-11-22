@@ -8,7 +8,7 @@ function CardGame(){
 
     const [rounds,setRounds] = useState(0)
     const [score, setScore] = useState(0)
-    const [bestScore, setBestScore] = useState(localStorage.getItem('bestScore') === 0 ? 0 : localStorage.getItem('bestScore'))
+    const [bestScore, setBestScore] = useState(localStorage.getItem('bestScore') === null ? 0 : localStorage.getItem('bestScore'))
 
     
     useEffect(()=>{
